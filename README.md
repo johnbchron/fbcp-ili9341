@@ -1,4 +1,17 @@
 # Notice for Running
+In `/boot/config.txt`, set the following
+```
+hdmi_force_hotplug=1
+#dtoverlay=vc4-kms-v3d
+
+hdmi_group=2
+hdmi_mode=87
+hdmi_cvt=240 240 60 1 0 0 0
+hdmi_force_hotplug=1
+
+display_rotate=1
+```
+
 Run build command `cmake -DST7789VW=ON -DGPIO_TFT_DATA_CONTROL=24 -DGPIO_TFT_RESET_PIN=25 -DGPIO_TFT_BACKLIGHT=27 -DSTATISTICS=0 -DSPI_BUS_CLOCK_DIVISOR=40 -DUSE_DMA_TRANSFERS=OFF ..` (https://github.com/juj/fbcp-ili9341/issues/178)
 
 # Introduction
